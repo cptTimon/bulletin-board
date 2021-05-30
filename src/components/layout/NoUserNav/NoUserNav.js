@@ -1,17 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import clsx from 'clsx';
 
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
-
+import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
 import styles from './NoUserNav.module.scss';
 
-const Component = ({className, children}) => (
-  <div className={clsx(className, styles.root)}>
-    <h2>NoUserNav</h2>
-    {children}
+const Component = () => (
+  <div className={styles.root}>
+    <Typography>
+      <Link className={styles.link} href="https://google.com" >
+        Login
+      </Link>
+    </Typography>
   </div>
 );
 

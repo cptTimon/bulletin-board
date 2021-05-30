@@ -3,6 +3,9 @@
 .root {
   .toolbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    .title {
+      margin-right: auto;
+    }
   }
 }

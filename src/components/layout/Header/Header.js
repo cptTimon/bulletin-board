@@ -55,7 +55,7 @@ const Component = ({className, user, login, logout}) => {
 
 Component.propTypes = {
   className: PropTypes.string,
-  user: PropTypes.object,
+  user: PropTypes.node,
   login: PropTypes.func,
   logout: PropTypes.func,
 };
