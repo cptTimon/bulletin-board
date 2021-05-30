@@ -1,4 +1,24 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+  margin-top: $base-size * 5;
+  padding: $base-size;
+
+  .paper {
+    padding: $base-size;
+    height: 100%;
+  }
+
+  .photo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  .contact {
+    margin-left: $base-size * 0,5;
+    padding-left: 20px;
+    padding-top: 15px;
+  }
+}

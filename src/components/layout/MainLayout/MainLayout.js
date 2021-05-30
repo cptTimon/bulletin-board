@@ -13,7 +13,6 @@ import Container from '@material-ui/core/Container';
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
     <Header />
-    <h2>MainLayout</h2>
     <Container fixed>
       <Paper spacing={2}>
         {children}
