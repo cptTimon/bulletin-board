@@ -5,13 +5,20 @@ import clsx from 'clsx';
 
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
-
+import Paper from '@material-ui/core/Paper';
+import { Header } from '../Header/Header';
 import styles from './MainLayout.module.scss';
+import Container from '@material-ui/core/Container';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
+    <Header />
     <h2>MainLayout</h2>
-    {children}
+    <Container fixed>
+      <Paper spacing={2}>
+        {children}
+      </Paper>
+    </Container>
   </div>
 );
 

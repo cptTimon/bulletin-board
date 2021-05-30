@@ -2,18 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
-import { PostsList } from '../../features/PostsList/PostsList';
-import { initialState } from '../../../redux/initialState';
 
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
-import styles from './Homepage.module.scss';
+import styles from './UserNav.module.scss';
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
-    <h2>Homepage</h2>
-    <PostsList posts={initialState.posts.data}/>
+    <h2>UserNav</h2>
     {children}
   </div>
 );
@@ -34,7 +31,7 @@ Component.propTypes = {
 // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
-  Component as Homepage,
-  // Container as Homepage,
-  Component as HomepageComponent,
+  Component as UserNav,
+  // Container as UserNav,
+  Component as UserNavComponent,
 };

@@ -1,0 +1,27 @@
+@import '../../../styles/settings.scss';
+
+ .root {
+  .icon {
+    margin-right: 10px;
+  }
+  .heroContent {
+    padding: 30px;
+  }
+  .heroButtons {
+    margin-top: 20px;
+  }
+  .cardGrid {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .card {
+    height: 100%;
+    display: flex;
+  }
+  .cardMedia {
+    padding-top: 56%;
+  }
+  .cardContent {
+    flex-grow: 1;
+  }
+}
