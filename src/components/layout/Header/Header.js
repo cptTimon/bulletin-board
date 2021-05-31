@@ -2,15 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
-
+import { connect } from 'react-redux';
+import { getUser, login, logout } from '../../../redux/userRedux.js';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { UserNav } from '../UserNav/UserNav';
 import { NoUserNav } from '../NoUserNav/NoUserNav';
 import Link from '@material-ui/core/Link';
-import { Link as RouterLink } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { getUser, login, logout } from '../../../redux/userRedux.js';
 
 import styles from './Header.module.scss';
 
@@ -19,7 +17,10 @@ const Component = ({className, user, login, logout}) => {
 
   const selectUser = ({target}) => {
     if (target.value) {
-      login({type: target.value});
+      login({
+        type: target.value,
+        email: 'johnDoe@email.com',
+      });
     } else logout();
   };
 
@@ -28,7 +29,7 @@ const Component = ({className, user, login, logout}) => {
       <AppBar position="fixed">
         <Toolbar className={styles.toolbar}>
           <Link
-            component={RouterLink}
+            component={Link}
             to='/'
             variant="h6"
             className={styles.title}
